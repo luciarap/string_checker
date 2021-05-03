@@ -43,8 +43,8 @@ public class GUI extends javax.swing.JFrame {
         btnCheck = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         btnCheatSheet = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnSwitchLowerUpper = new javax.swing.JButton();
+        btnTrimClean = new javax.swing.JButton();
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sk/stu/fiit/obrazky/regex-cheat-sheet2.png"))); // NOI18N
 
@@ -104,24 +104,24 @@ public class GUI extends javax.swing.JFrame {
         });
         jPanel1.add(btnCheatSheet, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 200, -1));
 
-        jButton1.setBackground(new java.awt.Color(0, 147, 204));
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Prepni malé/veľké písmená");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnSwitchLowerUpper.setBackground(new java.awt.Color(0, 147, 204));
+        btnSwitchLowerUpper.setForeground(new java.awt.Color(0, 0, 0));
+        btnSwitchLowerUpper.setText("Prepni malé/veľké písmená");
+        btnSwitchLowerUpper.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                btnSwitchLowerUpperMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 200, -1));
+        jPanel1.add(btnSwitchLowerUpper, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 200, -1));
 
-        jButton2.setBackground(new java.awt.Color(0, 147, 204));
-        jButton2.setText("Trim a Clean");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnTrimClean.setBackground(new java.awt.Color(0, 147, 204));
+        btnTrimClean.setText("Trim a Clean");
+        btnTrimClean.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                btnTrimCleanMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, 200, -1));
+        jPanel1.add(btnTrimClean, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, 200, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -156,7 +156,7 @@ public class GUI extends javax.swing.JFrame {
         dialogCheatSheet.setVisible(true);
     }//GEN-LAST:event_btnCheatSheetMouseClicked
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void btnSwitchLowerUpperMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSwitchLowerUpperMouseClicked
         String retazec = taRetazec.getText();
         StringBuilder newRetazec = new StringBuilder(retazec);
         for(int i = 0; i < retazec.length(); i++) {
@@ -169,13 +169,13 @@ public class GUI extends javax.swing.JFrame {
             }
         }
         taRetazec.setText(newRetazec.toString());
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_btnSwitchLowerUpperMouseClicked
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void btnTrimCleanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTrimCleanMouseClicked
         String retazec = taRetazec.getText();
         retazec = retazec.replaceAll("[\\n\\t ]", "");
         taRetazec.setText(retazec);
-    }//GEN-LAST:event_jButton2MouseClicked
+    }//GEN-LAST:event_btnTrimCleanMouseClicked
 
     /**
      * @param args the command line arguments
@@ -215,9 +215,9 @@ public class GUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCheatSheet;
     private javax.swing.JButton btnCheck;
+    private javax.swing.JButton btnSwitchLowerUpper;
+    private javax.swing.JButton btnTrimClean;
     private javax.swing.JDialog dialogCheatSheet;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
